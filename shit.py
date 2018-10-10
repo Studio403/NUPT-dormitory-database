@@ -21,6 +21,8 @@ for xls_file in xls_list:
         while (row<building.nrows):
             if (building.cell(row,col).value!=""):
                 room_id=building.cell(row,col).value
+            if (building.cell(row,col).ctype == 2):
+                room_id=int(room_id)
             bed_id=building.cell(row,col+1).value
             name=building.cell(row,col+2).value
             student_id=building.cell(row,col+3).value
